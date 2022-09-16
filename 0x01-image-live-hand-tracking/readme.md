@@ -33,4 +33,4 @@ references:
 - https://google.github.io/mediapipe/
 
 
-[demo]: 0x01-live-handtracking-demo.gif
+[demo]: docs/0x01-live-handtracking-demo.gif
