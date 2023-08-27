@@ -11,12 +11,19 @@ Color Pallete Extractor
 v1.0.0
 """
 
+"""
+For Ubuntu
+sudo apt-get install python3-tk
+plt.switch_backend('TkAgg')
+"""
+plt.switch_backend('TkAgg')
+
 image_path = sys.argv[1]
 ct = ColorThief(image_path)
-dominant_color = ct.get_color(quality=1)
+# dominant_color = ct.get_color(quality=1)
 
-plt.imshow([dominant_color])
-plt.show()
+# plt.imshow([dominant_color])
+# plt.show()
 
 palette = ct.get_palette(color_count=5)
 plt.imshow([[ palette[i] for i in range(5) ]])
@@ -27,6 +34,3 @@ for color in palette:
     print(f"#{color[0]:02x}{color[1]:02x}{color[2]:02x}")
     print(colorsys.rgb_to_hsv(*color))
     print(colorsys.rgb_to_hls(*color))
-
-
-
